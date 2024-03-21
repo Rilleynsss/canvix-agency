@@ -1,18 +1,25 @@
+const { Roboto, DM_Sans } = require("next/font/google");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+    fontFamily: {
+      roboto: ["var(--roboto)"],
+      dm: ["var(--dm-sans)"],
     },
+    colors: {
+      "light-green": "rgba(100, 204, 197, 1)",
+      blk: "rgba(12, 12, 12, 1)",
+      "light-black": "rgba(12, 12, 12, 0.9)",
+      "light-gray": "rgba(244, 244, 244, 1)",
+      "dark-gray": "rgba(223, 223, 223, 1)",
+    },
+    extend: {},
   },
   plugins: [],
 };
